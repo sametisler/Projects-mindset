@@ -1,8 +1,16 @@
 
 from flask import Flask, render_template , request
+import flask
 from tc_kimlik_generator import tc_kimlik_no_uret
 result = []
 app = Flask(__name__)
+
+__all__ = ["create_app"]
+
+
+def create_app():
+    app = flask.Flask(__name__)
+    app.config.from_pyfile('settings.py')
 
 
 @app.route('/')
