@@ -5,13 +5,6 @@ from tc_kimlik_generator import tc_kimlik_no_uret
 result = []
 app = Flask(__name__)
 
-__all__ = ["create_app"]
-
-
-def create_app():
-    app = flask.Flask(__name__)
-    app.config.from_pyfile('settings.py')
-
 
 @app.route('/')
 def my_form():
@@ -27,3 +20,5 @@ def tc():
     return render_template('result.html', result = result)
 
 
+if __name__ == '__main__':
+    app.run(debug=False)
