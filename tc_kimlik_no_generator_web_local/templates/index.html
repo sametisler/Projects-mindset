@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
     <title>Document</title>
 </head>
 <body>
-    <h4>Lütfen Oluşturmak İstediğiniz Tc kimlik numarası Sayısını Giriniz:</h4>
+    <div class="center">
+        <img src="{{url_for('static', filename='tcuret-tc-kimlik-karti.jpg')}}" width="500px" align="center" />
+    <h2>Lütfen Oluşturmak İstediğiniz Tc kimlik numarası Sayısını Giriniz:</h2>
     <form method="POST" action="/result">
         <label for="number"></label>
-        <input type="number" name="number" id="number" required>
-        <input type="submit" value="Üret">
+        <input type="text" name="number" id="number" size="30" required>
+        <input class="button" type="submit" value="Üret">
     </form>
+
+</div>
 </body>
 </html>

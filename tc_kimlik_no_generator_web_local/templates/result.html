@@ -2,11 +2,19 @@
 <html>
 <head>
     <title>Result Page</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
 </head>
 <body>
-    <h1>Tc Kimlik Numaraları :</h1>
+   <!-- <h1>Tc Kimlik Numaraları :</h1> -->
+    <table>
+        <tr>
+            <th>Tckimlik Numaraları</th>
+        </tr>
+        <tr>
     {% for item in result %}
-    <p>{{ item }}</p>
+    <td>{{ item }}</td>
+        </tr>
 {% endfor %}
+    </table>
 </body>
 </html>
